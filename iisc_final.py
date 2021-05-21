@@ -303,7 +303,7 @@ def to_nifti(iisc, affine, header, mask_indices):
     else:
         nifti_iisc = iisc.reshape(nifti_shape)
     # Construct output NIfTI image
-    nifti_img = nib.Nifti1Image(nifti_iisc, affine)
+    nifti_img = nib.Nifti1Image(nifti_iisc, affine, header)
     return nifti_img
 
 
